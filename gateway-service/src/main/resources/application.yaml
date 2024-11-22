@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: gateway-service
+  security:
+    oauth2:
+      client:
+        registration:
+          gateway-client:
+            provider: auth-service-local
+            client-id: gateway-client-1
+            client-secret: axWUF7gw2yRkGFeeD4ycEr3Tld
+            authorization-grant-type: client_credentials
+            scope: read
+        provider:
+          auth-service-local:
+            token-uri: http://localhost:8888/oauth2/token
+server:
+  port: 8080
