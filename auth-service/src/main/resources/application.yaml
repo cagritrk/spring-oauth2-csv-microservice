@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: authorization-server
+  security:
+    oauth2:
+      authorizationserver:
+        issuer: http://localhost:8888
+    gateway-client:
+      id: gateway-client-1
+      secret-key: axWUF7gw2yRkGFeeD4ycEr3Tld
+      scope: read
+server:
+  port: 8888
+
