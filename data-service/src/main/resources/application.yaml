@@ -1,0 +1,26 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: resource-server
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8888
+  datasource:
+    generate-unique-name: false
+    name: h2-data-service-db
+  h2:
+    console:
+      enabled: true
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        jdbc: DEBUG
+#    com:
+#      zaxxer:
+#        hikari:
+#          HikariConfig: DEBUG
